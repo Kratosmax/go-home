@@ -1,12 +1,12 @@
 {
 	"manifest_version":2,
-	"name":"Hurry home & 下班回家",
+	"name":"每天都在等下班",
 	"description": "平平安安上班，高高兴兴下班",
-	"version": "2.1.1",
+	"version": "3.0.0",
 	"browser_action":
 	{
 		"default_icon": "images/icon16.png",
-		"default_title": "Hurry home & 下班回家",
+		"default_title": "每天都在等下班",
 		"default_popup": "index.html"
 	},
 	"icons": {

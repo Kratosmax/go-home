@@ -19,7 +19,7 @@ $("#hurry-home-single_week").on('click',function(e){
 	alert('设置成功')
 })
 $("#hurry-home-to_github").on('click',function(e){
-	window.open("https://github.com/sbjim/go-home","_blank");
+	window.open("https://github.com/Kratosmax/go-home","_blank");
 })
 // 开始时间
 $("#hurry-home-input_start_time").on("blur",function(e){
@@ -116,8 +116,17 @@ function getRandomMsg(day){
 		'小心点，你老板在你背后！',
 	];
 
+	
 	let msg = lists[Math.floor(Math.random()*lists.length)];
-	let resp = "今天是星期"+day_msg[day]+"，"+msg;
+	$.ajax({
+		method: 'GET',
+		url: "https://v1.hitokoto.cn/?encode=text",
+		success: function(result) {
+		  //请求成功,result中将包含文本内容
+		  msg = result
+		}
+	  });
+	let resp = "今天周"+day_msg[day]+"，"+msg;
 
 	// 随机已返回一条满满的正能量
 	return resp;
